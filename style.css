@@ -1,0 +1,142 @@
+/* Reset global */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fundo com gradiente animado */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #000000, #3a0ca3, #000000, #7209b7); /* como criar gradiente*/
+  background-size: 400% 400%; /* tamanho do back*/
+  animation: gradientBG 10s ease infinite; /* animação que faz o efeito de ida e vinda da cor por 10s, infinite pq ele vai ate o final e recomeça*/ 
+  color: white;
+}
+
+/* Animação do gradiente - estudar sobre a estrutura mais a fundo para eternizar*/ 
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container principal */
+.screen-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* Título */
+.login-title {
+  font-size: 32px;
+  letter-spacing: 2px; /* espaco entre letras*/
+}
+
+/* Caixa do login */
+.login-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 32px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  width: 300px;
+}
+
+/* Formulário */
+.login-form {
+  display: flex;
+  flex-direction: column; /* formatacao column, tipo de alinhamento de blocos no uso do flex */
+  gap: 16px;
+}
+
+/* Labels */
+.login-form label {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Campos de entrada */
+.login-form input,
+.login-form select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);/* RED GREEN BLUE ALPHA */
+  color: white;
+}
+
+/* Placeholder visível */
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Botão */
+.login-form button {
+  padding: 0.8rem;
+  background: linear-gradient(90deg, #7209b7, #3a0ca3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.login-form button:hover {
+  transform: scale(1.05);/* Transformacao em maior escala ao passar mouse no botao */
+  background: linear-gradient(90deg, #3a0ca3, #7209b7); /* gradiente linear */ 
+}
+
+
+/* RESPONSIVIDADE */
+/* ============================= */
+
+/* Tablets (até 768px) */
+@media (max-width: 768px) {
+  .login-box {
+    width: 80%;                /* Diminui largura */
+    padding: 1.5rem;           /* Ajusta espaçamento interno */
+  }
+
+  .login-title {
+    font-size: 1.8rem;         /* Reduz título */
+  }
+}
+
+/* Celulares (até 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;             /* Dá respiro nas bordas */
+  }
+
+  .login-box {
+    width: 100%;               /* Ocupa toda a tela */
+    padding: 1rem;             /* Menos espaçamento */
+  }
+
+  .login-title {
+    font-size: 1.5rem;         /* Título menor */
+  }
+
+  .login-form label {
+    font-size: 0.85rem;        /* Fonte dos labels reduzida */
+  }
+
+  .login-form input,
+  .login-form select {
+    font-size: 0.9rem;         /* Fonte menor nos campos */
+    padding: 0.5rem;           /* Altura reduzida */
+  }
+
+  .login-form button {
+    font-size: 0.9rem;         /* Fonte menor no botão */
+    padding: 0.6rem;           /* Altura reduzida */
+  }
+}

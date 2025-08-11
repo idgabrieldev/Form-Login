@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!--SEO METATAG-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page CV of Gabriel Silva, a Software Developer">
+    <meta name="keywords" content="Frontend Developer, HTML, CSS, JavaScript, Web Development">
+    <meta name="author" content="Gabriel Silva">
+      <!--META OG-->
+    <meta property="og:title" content="Gabriel Silva - Software Developer">
+    <meta property="og:description" content="Form Login screen of Gabriel, a Software Developer."/>
+    <meta property="og:image" content="https://i.imgur.com/mOhAjcW.jpeg"/>
+    <title>FormLogin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+  <body>
+    <main class="screen-container">
+      <h2 class="login-title">LOGIN</h2>
+          <section class="login-box"> <!--caixa do login-->
+            <form action="index.html" method="POST" class="login-form">
+              <label for="email">E-mail:</label><!--sinalizaçao de entrada-->
+              <input type="email" id="email" name="email" placeholder="Seu E-mail" required><!--entrada de dados-->
+
+              <label for="password">Senha:</label><!--sinalizaçao de entrada-->
+              <input type="password" id="password" name="password" placeholder="Password" required><!--entrada de dados-->
+              <label for="gender">Gênero:</label>
+              <select id="gender" name="gender"><!--poderia ter utilizado o (input type radio)-->
+                <option value="Homem">Homem</option> 
+                <option value="Mulher">Mulher</option>
+                <option value="Outros">Outros</option>
+              </select>
+              <button type="submit">Entrar</button>
+            </form>
+          </section>   
+    </main>
+  </body>
+</html>
