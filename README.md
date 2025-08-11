@@ -1,4 +1,4 @@
-# Tela de Login - Gabriel Silva
+# Tela de Login 
 
 ## 📌 Descrição
 Projeto de uma tela de login simples e responsiva, utilizando **HTML5** e **CSS3** com Flexbox e animação de gradiente no fundo.
